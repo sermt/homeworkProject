@@ -1,0 +1,40 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  
+  canvas {
+    height: auto;
+    margin: 0 auto;
+    max-width: 100%;
+  }
+  
+  h1 {
+    text-align: center;
+  }
+  
+  #pieChartPanel {
+    text-align: center;
+  }
+  
+  @media screen and (max-width: 600px) {
+    body {
+      font-size: 14px;
+    }
+  
+    h1 {
+      font-size: 24px;
+    }
+  }
+  
+  @media screen and (min-width: 601px) and (max-width: 1200px) {
+    body {
+      font-size: 16px;
+    }
+  
+    h1 {
+      font-size: 28px;
+    }
+  }
+  

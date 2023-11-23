@@ -1,0 +1,315 @@
+/* General Reset */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Body Styles */
+body {
+  font-family: "Roboto", Arial, sans-serif;
+  margin: 20px;
+}
+
+/* Button Styles */
+.actions__btn-delete,
+.actions__btn-update,
+.btn-show-images,
+.button,
+.button--filter,
+.pagination__button {
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+  margin-bottom: 10px;
+  padding: 10px;
+  transition: background-color 0.3s ease;
+}
+
+/* Different colors for buttons based on actions */
+.actions__btn-delete,
+.button--filter,
+.pagination__button {
+  background-color: #4caf50; /* Green */
+  color: white;
+}
+
+.actions__btn-update {
+  background-color: #4285f4; /* Blue */
+  color: white;
+}
+
+.btn-show-images {
+  background-color: #ff9800; /* Orange */
+  color: white;
+}
+
+/* Disabled Button Styles */
+.button:disabled {
+  background-color: #dddddd;
+  color: #999999;
+  cursor: not-allowed;
+}
+
+/* Close Button Styles */
+.close {
+  color: #fff;
+  cursor: pointer;
+  font-size: 30px;
+  position: absolute;
+  right: 10px;
+  top: 10px;
+}
+
+/* Header 1 Styles */
+.header h1 {
+  font-size: 24px;
+  margin-bottom: 16px;
+}
+
+/* Media Query Styles for Smaller Screens */
+@media screen and (max-width: 800px) {
+  .table__header.not-essential,
+  .table td.not-essential,
+  .table th.not-essential {
+    display: none;
+  }
+}
+
+/* Modal Container Styles */
+.modal-container {
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: none;
+  height: 100%;
+  justify-content: center;
+  left: 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1;
+}
+
+/* Modal Content Styles */
+.modal-content {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  max-height: 80%;
+  max-width: 80%;
+  overflow: auto;
+}
+
+/* Modal Content Image Styles */
+.modal-content img {
+  height: 100%;
+  margin: 0.5%;
+  max-width: 100%;
+  width: 100%;
+}
+
+.modal-buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+
+/* Pagination Styles */
+.pagination {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.pagination__button {
+  background-color: #4caf50;
+  border: none;
+  border-radius: 4px;
+  color: white;
+  cursor: pointer;
+  font-weight: bold;
+  padding: 10px 20px;
+  transition: background-color 0.3s ease;
+}
+
+.pagination__button:hover {
+  background-color: #45a049;
+}
+
+.pagination__current-page {
+  font-size: 18px;
+  font-weight: bold;
+  margin: 0 10px;
+}
+
+/* Table Styles */
+.table {
+  border-collapse: collapse;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+  overflow: hidden;
+  overflow-x: auto;
+  width: 100%;
+}
+
+/* Table Caption Styles */
+.table__caption {
+  font-size: 24px;
+  font-weight: bold;
+  margin: 10px auto;
+  text-align: center;
+}
+
+/* Table Cell Styles */
+.table td,
+.table th {
+  border: 1px solid #ddd;
+  padding: 12px;
+  text-align: left;
+}
+
+/* Table Header Styles */
+.table__header {
+  background-color: #f8f8f8;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+/* Table Row Hover Styles */
+.table tr:hover {
+  background-color: #f1f1f1;
+}
+
+/* Thumbnail Image Styles */
+.thumbnail img {
+  height: auto;
+  max-height: 100px;
+  max-width: 100%;
+}
+
+#imageGallery {
+  display: none; /* Initially hidden */
+  position: fixed; /* Fixed position to cover the entire viewport */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  padding: 20px;
+}
+
+#imageGallery img {
+  max-width: 100%;
+  max-height: 100%;
+  display: block;
+  margin: 0 auto;
+  border: 1px solid #ccc;
+  padding: 5px;
+  object-fit: cover;
+}
+
+.modal-content {
+  max-height: 80%;
+  max-width: 80%;
+  overflow: auto;
+  position: relative;
+  text-align: center;
+}
+
+.modal-content img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.button {
+  background-color: #4285f4;
+  color: white;
+  margin: 5px;
+  padding: 10px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.button:hover {
+  background-color: #357ae8;
+}
+
+.close {
+  color: #fff;
+  cursor: pointer;
+  font-size: 30px;
+  position: absolute;
+  right: 10px;
+  top: 10px;
+}
+button.disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* Estilos específicos para el Modal de Edición */
+#editModal.modal-container {
+  display: none;
+  /* Otros estilos específicos para el modal de edición */
+}
+
+#editModal .modal-content {
+  background-color: #fefefe;
+  margin: 10% auto;
+  padding: 20px;
+  /* Otros estilos específicos para el contenido del modal de edición */
+}
+
+#editModal label {
+  display: block;
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+#editModal input,
+#editModal textarea {
+  width: 100%;
+  padding: 8px;
+  margin-top: 5px;
+  margin-bottom: 10px;
+  box-sizing: border-box;
+}
+
+#editModal button {
+  background-color: #4285f4;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+#editModal button:hover {
+  background-color: #357ae8;
+}
+
+#editModal button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.btn-warning {
+  background-color: red;
+}
+
+#nextButton,
+#nextImageButton {
+  background-color: #4285f4;
+}
+
+#prevButton,
+#prevImageButton {
+  background-color: #45a049;
+}
